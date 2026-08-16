@@ -1,1 +1,0 @@
-Image assets for HOME TABLE + PAIRING

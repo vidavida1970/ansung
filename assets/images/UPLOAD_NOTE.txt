@@ -1,1 +1,0 @@
-Replacing broken image references with actual image binaries.
