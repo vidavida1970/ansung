@@ -2,7 +2,6 @@
   const message = document.querySelector('#actionMessage');
   const shareButton = document.querySelector('#shareButton');
   const notifyButton = document.querySelector('#notifyButton');
-  const futureLinks = document.querySelectorAll('[data-future-page]');
 
   shareButton?.addEventListener('click', async () => {
     const payload = {
@@ -28,14 +27,6 @@
   });
 
   notifyButton?.addEventListener('click', () => {
-    message.textContent = '다음 호 알림 신청은 뉴스레터/CRM 연결 후 활성화할 수 있도록 버튼 영역을 준비해 두었습니다.';
-  });
-
-  futureLinks.forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      message.textContent = '해당 섹션 페이지가 추가되면 이 목차 링크에 연결됩니다.';
-      document.querySelector('.closing')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
+    message.textContent = '9월호에는 실제 인터뷰가 실립니다. 공유하기로 주소를 남겨 주시면 다음 호가 나왔을 때 전해 드리겠습니다.';
   });
 })();

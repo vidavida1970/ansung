@@ -85,9 +85,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero h1 {
   max-width: 820px;
   margin: 0;
-  font-size: clamp(40px, 6vw, 76px);
-  line-height: 1.08;
-  letter-spacing: -0.045em;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
   font-weight: 500;
   text-wrap: balance;
 }
@@ -95,7 +95,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero__subtitle {
   max-width: 680px;
   margin: 24px 0 0;
-  font-size: clamp(16px, 1.5vw, 19px);
+  font-size: 18px;
   line-height: 1.7;
   font-weight: 400;
   color: rgba(255,255,255,.86);
@@ -140,9 +140,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contents h2,
 .closing h2 {
   margin: 0;
-  font-size: clamp(28px, 3vw, 40px);
-  line-height: 1.25;
-  letter-spacing: -0.035em;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
   font-weight: 500;
 }
 .letter__copy p {
@@ -159,8 +159,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .letter__copy .highlight {
   margin: 46px 0;
-  font-weight: 600;
-  line-height: 1.75;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8;
 }
 .wide-figure {
   width: min(1080px, calc(100% - (var(--side) * 2)));
@@ -234,7 +235,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .contents__title {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.45;
   letter-spacing: -0.02em;
 }
@@ -339,7 +340,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
     background: linear-gradient(180deg, rgba(10,7,5,.04) 0%, rgba(10,7,5,.10) 39%, rgba(10,7,5,.92) 100%);
   }
   .hero__inner { padding-bottom: 46px; }
-  .hero h1 { font-size: 36px; }
+  .hero h1 { font-size: 28px; }
   .mobile-break { display: block; }
   .hero__subtitle { margin-top: 18px; font-size: 16px; }
   .hero__rule { margin: 20px 0 14px; }
@@ -348,7 +349,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
   .letter { padding: 80px 0; }
   .letter__header { margin-bottom: 38px; }
-  .letter h2 { font-size: 28px; }
+  .letter h2 { font-size: 22px; }
   .letter__copy p { font-size: 17px; line-height: 1.8; margin-bottom: 28px; }
   .letter__copy .highlight { margin-block: 38px; }
   .wide-figure { width: 100%; margin: 48px 0; }
