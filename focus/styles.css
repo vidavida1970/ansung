@@ -200,16 +200,16 @@ blockquote {
   font-size: 15px;
 }
 
-.wide-figure {
-  width: min(1080px, calc(100% - (var(--side) * 2)));
-  margin: 56px auto 88px;
+.bleed-figure {
+  width: 100%;
+  margin: 64px 0 96px;
 }
-.wide-figure img {
+.bleed-figure img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 .square-figure {
-  width: min(760px, calc(100% - (var(--side) * 2)));
+  width: min(760px, calc(100% - (var(--side) * 2) + 40px));
   margin: 20px auto 96px;
 }
 .square-figure img {
@@ -233,6 +233,25 @@ figcaption {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.5;
+}
+.bleed-figure figcaption,
+.square-figure figcaption,
+.shop-pair figcaption,
+.taste-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+}
+.bleed-figure figcaption {
+  width: min(1080px, calc(100% - (var(--side) * 2)));
+  margin: 10px auto 0;
+}
+figcaption small {
+  flex: 0 0 auto;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: right;
 }
 
 .tasting {
@@ -266,7 +285,7 @@ figcaption {
 }
 .step-lead { font-weight: 500; }
 .taste-figure {
-  width: min(680px, calc(100% - (var(--side) * 2)));
+  width: min(720px, calc(100% - (var(--side) * 2) + 40px));
   margin: 28px auto 28px;
 }
 .taste-figure img {
@@ -274,6 +293,7 @@ figcaption {
   object-fit: cover;
 }
 .tasting figcaption { color: rgba(244,239,232,.62); }
+.tasting figcaption small { color: rgba(244,239,232,.46); }
 .taste-copy {
   padding-bottom: 72px;
 }
@@ -304,7 +324,6 @@ figcaption {
   font-size: 16px;
   line-height: 1.65;
 }
-.save-list .pending p { color: var(--muted); }
 
 .contents {
   padding: 96px 0 110px;
@@ -379,12 +398,18 @@ figcaption {
   .story__copy p, .taste-copy p { font-size: 17px; }
   .wide-figure, .square-figure, .shop-pair { width: 100%; }
   .wide-figure { margin: 48px 0 72px; }
+  .bleed-figure { margin: 48px 0 72px; }
   .square-figure { margin: 8px 0 80px; }
   .shop-pair { grid-template-columns: 1fr; gap: 28px; margin: 8px 0 64px; }
   .wide-figure figcaption,
   .square-figure figcaption,
   .shop-pair figcaption,
-  .taste-figure figcaption { padding-inline: 24px; }
+  .taste-figure figcaption,
+  .bleed-figure figcaption { padding-inline: 24px; width: auto; flex-direction: column; gap: 4px; }
+  .bleed-figure figcaption small,
+  .square-figure figcaption small,
+  .shop-pair figcaption small,
+  .taste-figure figcaption small { text-align: left; }
   .tasting { padding-top: 80px; }
   .taste-figure { width: 100%; }
   .save { padding: 80px 0; }
