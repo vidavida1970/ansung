@@ -22,7 +22,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 a { color: inherit; }
-img { display: block; width: 100%; }
+img { display: block; width: 100%; height: auto; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
 .skip-link {
