@@ -1,1 +1,12 @@
-const bar=document.querySelector('.progress__bar');const button=document.querySelector('.menu-button');const nav=document.querySelector('.section-nav');function updateProgress(){const root=document.documentElement;const max=root.scrollHeight-root.clientHeight;const ratio=max>0?root.scrollTop/max*100:0;bar.style.width=`${Math.min(100,Math.max(0,ratio))}%`}window.addEventListener('scroll',updateProgress,{passive:true});window.addEventListener('resize',updateProgress);updateProgress();button?.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!open));nav.classList.toggle('is-open',!open);button.querySelector('[aria-hidden="true"]').textContent=open?'＋':'−'});nav?.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{nav.classList.remove('is-open');button?.setAttribute('aria-expanded','false');const icon=button?.querySelector('[aria-hidden="true"]');if(icon)icon.textContent='＋'})});
+(() => {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const id = link.getAttribute('href');
+      const target = id && document.querySelector(id);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
