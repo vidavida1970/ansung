@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>안성 웹진 · 2026년 8월호</title>
+  <title>眞안성 · 2026년 8월호</title>
   <meta name="description" content="장날의 시간을 끓이다, 안성국밥. 늦여름의 열기, 깊은 맛으로 건너다." />
   <meta name="theme-color" content="#f3efe8" />
   <link rel="canonical" href="https://vidavida1970.github.io/ansung/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ko_KR" />
-  <meta property="og:site_name" content="안성 웹진" />
+  <meta property="og:site_name" content="眞안성" />
   <meta property="og:title" content="장날의 시간을 끓이다, 안성국밥" />
-  <meta property="og:description" content="늦여름의 열기, 깊은 맛으로 건너다. 안성 웹진 2026년 8월호." />
+  <meta property="og:description" content="늦여름의 열기, 깊은 맛으로 건너다. 眞안성 2026년 8월호." />
   <meta property="og:url" content="https://vidavida1970.github.io/ansung/" />
   <meta property="og:image" content="https://vidavida1970.github.io/ansung/focus/assets/og-focus.webp" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -35,6 +35,9 @@
       background: var(--paper);
       color: var(--ink);
       font-family: "Gothic A1", "Apple SD Gothic Neo", sans-serif;
+      word-break: keep-all;
+      overflow-wrap: normal;
+      line-break: strict;
     }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
@@ -71,9 +74,12 @@
     .wordmark {
       font-family: "Nanum Myeongjo", serif;
       font-size: 30px;
-      letter-spacing: -0.04em;
+      letter-spacing: 0.02em;
       text-align: center;
+      white-space: nowrap;
     }
+    .wordmark-jin { color: var(--accent); }
+    .wordmark-name { color: var(--ink); }
     .issue-meta,
     .kicker,
     .folio-link,
@@ -131,7 +137,9 @@
       font-size: clamp(42px, 6vw, 78px);
       line-height: 0.94;
       letter-spacing: -0.04em;
-      max-width: 8ch;
+      max-width: 7em;
+      word-break: keep-all;
+      overflow-wrap: normal;
     }
     .standfirst { margin: 0 0 14px; font-size: 20px; }
     .dek, .mosaic-card p, .letter-band p {
@@ -169,7 +177,8 @@
       font-family: "Nanum Myeongjo", serif;
       font-size: clamp(30px, 4vw, 48px);
       line-height: 1.12;
-      max-width: 14ch;
+      max-width: 11em;
+      word-break: keep-all;
     }
     .mosaic {
       display: grid;
@@ -189,6 +198,7 @@
       font-family: "Nanum Myeongjo", serif;
       font-size: clamp(24px, 3vw, 34px);
       line-height: 1.15;
+      word-break: keep-all;
     }
     .site-foot {
       display: flex;
@@ -219,7 +229,7 @@
     <a class="skip-link" href="#main">본문으로 건너뛰기</a>
     <header class="mast">
       <p class="issue-meta">Vol.08 / 2026.08</p>
-      <a class="wordmark" href="./">안성 웹진</a>
+      <a class="wordmark" href="./" aria-label="眞안성"><span class="wordmark-jin">眞</span><span class="wordmark-name">안성</span></a>
       <div class="mast-actions">
         <a class="quiet-link" href="#this-issue">Archive</a>
         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="issue-menu">Index</button>
@@ -244,7 +254,7 @@
         </a>
         <div class="cover-copy">
           <p class="kicker">Vol.08 · FOCUS</p>
-          <h1>장날의 시간을 끓이다, 안성국밥</h1>
+          <h1>장날의 시간을 끓이다,<br />안성국밥</h1>
           <p class="standfirst">늦여름의 열기, 깊은 맛으로 건너다</p>
           <p class="dek">장터의 기억에서 포도밭과 금광호수까지, 뜨거운 한 그릇을 따라 만나는 안성의 맛과 사람.</p>
           <a class="text-link" href="focus/">표지 기사 읽기</a>
@@ -322,7 +332,7 @@
     </main>
 
     <footer class="site-foot">
-      <p>ANSEONG WEBZINE · AUGUST 2026</p>
+      <p>眞안성 · AUGUST 2026</p>
       <p><a href="calendar/">9월 달력 보기</a></p>
     </footer>
   </div>
